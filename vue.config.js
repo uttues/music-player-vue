@@ -12,16 +12,15 @@ module.exports = {
         config.resolve.alias
             .set("vue$", "vue/dist/vue.esm.js")
             .set("@", resolve("src"))
-            .set("@apis", resolve("src/apis"))
-            .set("@assets", resolve("src/assets"))
-            .set("@components", resolve("src/components"))
-            .set("@constants", resolve("src/constants"))
-            .set("@pages", resolve("src/pages"))
-            .set("@router", resolve("src/router"))
-            .set("@static", resolve("src/static"))
-            .set("@store", resolve("src/store"))
-            .set("@styles", resolve("src/styles"))
-            .set("@utils", resolve("src/utils"))
+            .set("apis", resolve("src/apis"))
+            .set("assets", resolve("src/assets"))
+            .set("components", resolve("src/components"))
+            .set("constants", resolve("src/constants"))
+            .set("pages", resolve("src/pages"))
+            .set("router", resolve("src/router"))
+            .set("store", resolve("src/store"))
+            .set("styles", resolve("src/styles"))
+            .set("utils", resolve("src/utils"))
 
         return config;
     },
@@ -34,9 +33,9 @@ module.exports = {
                 // 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀
                 // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
                 prependData: `
-                    @import "@styles/scss";
-                    @import "~@styles/normalize.css";
-                    @import "~@assets/iconfont/iconfont.css";
+                    @import "assets/styles/scss";
+                    @import "~assets/styles/normalize.css";
+                    @import "~assets/iconfont/iconfont.css";
                 `
             }
         }
