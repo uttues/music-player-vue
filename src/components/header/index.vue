@@ -3,12 +3,7 @@
         <a class="btn-menu">
             <i class="iconfont icon-caidan" />
         </a>
-        <div class="nav-links">
-            <a class="nav-item" href="#">我的</a>
-            <a class="nav-item" href="#">发现</a>
-            <a class="nav-item" href="#">云村</a>
-            <a class="nav-item" href="#">视频</a>
-        </div>
+        <Nav />
         <a class="btn-search">
             <i class="iconfont icon-fangdajing" />
         </a>
@@ -16,7 +11,13 @@
 </template>
 
 <script>
-export default {};
+import Nav from './sub-comps/nav'
+
+export default {
+    components: {
+        Nav
+    }
+};
 // light
 // bg #ffffff
 // #4f4f4f active
