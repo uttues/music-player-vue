@@ -1,8 +1,139 @@
-// default
-$theme-light: (
-
+// 公共组件
+$common-fill-color-day: (
+  bg: #fff
+);
+$common-fill-color-night: (
+  bg: #181818
 );
 
-$theme-dark: (
+$common-font-color-day: (
+  header-btn-icon: #7f7f80,
+  header-text-active: #7f7f80,
+  header-text-dark: #3a3a3a
+);
+$common-font-color-night: (
+  header-btn-icon: #a19e9e,
+  header-text-active: #7d7d7d,
+  header-text-dark: #343434
+);
 
-)
+// 发现页面
+$find-fill-color-day: (
+  find-menu-btn-bg-left: #ff5a4c,
+  find-menu-btn-bg-right: #ff1d12
+);
+$find-fill-color-night: (
+  find-menu-btn-bg-left: #383838,
+  find-menu-btn-bg-right: #383838  
+);
+
+$find-font-color-day: (
+  netease-color: #ff3a3a,
+
+  find-menu-btn-icon: #fff,
+  find-menu-btn-text: #333,
+
+  find-selected-songs-header: #333,
+  find-selected-songs-item-title: #333,
+  find-selected-songs-item-frequency: #fff,
+  
+  find-recommendation-type-header: #333,
+  find-recommendation-type-text: #333,
+  find-recommendation-type-text-supplement: #808080,
+);
+$find-font-color-night: (
+  netease-color: #902b2b,
+  
+  find-menu-btn-icon: #fff,
+  find-menu-btn-text: #7c7c7c,
+
+  find-selected-songs-header: #7c7c7c,
+  find-selected-songs-item-title: #7c7c7c,
+  find-selected-songs-item-frequency: #a0a0a0,
+
+  find-recommendation-type-header: #7c7c7c,
+  find-recommendation-type-text: #7c7c7c,
+  find-recommendation-type-text-supplement: #353535,
+);
+
+$find-border-color-day: (
+  find-single-border-color: #e6e6e6,
+);
+$find-border-color-night: (
+  find-single-border-color: #1d1d1d,
+);
+
+
+// 其它页面
+// $find-fill-color-day: (
+  
+// );
+// $find-fill-color-night: (
+  
+// );
+
+// $find-font-color-day: (
+  
+// );
+// $find-font-color-night: (
+  
+// );
+
+// $find-border-color-day: (
+// );
+// $find-border-color-night: (
+// );
+
+
+// // default: light
+// $main-color-light: (
+//   bg-color: #fff,
+//   netease-color: #ff3a3a
+// );
+
+// $main-color-dark: (
+//   bg-color: #181818,
+//   netease-color: #902b2b,
+// );
+
+// $find-page-light: (
+//   find-single-border-color: #e6e6e6,
+
+//   header-btn-color: #7f7f80,
+//   header-text-color-active: #7f7f80,
+//   header-text-color-dark: #3a3a3a,
+
+//   find-menu-btn-icon-color: #fff,
+//   find-menu-btn-bg-left-color: #ff5a4c,
+//   find-menu-btn-bg-right-color: #ff1d12,
+//   find-menu-btn-text-color: #333,
+
+//   find-selected-songs-header: #333,
+//   find-selected-songs-item-title: #333,
+//   find-selected-songs-item-frequency: #fff,
+
+//   find-recommendation-type-header: #333,
+//   find-recommendation-type-text: #333,
+//   find-recommendation-type-text-supplement: #808080,
+// );
+
+// $find-page-dark: (
+//   find-single-border-color: #1d1d1d,
+
+//   header-btn-color: #7f7f80,
+//   header-text-color-active: #7f7f80,
+//   header-text-color-dark: #3a3a3a,
+
+//   find-menu-btn-icon-color: #fff,
+//   find-menu-btn-bg-left-color: #383838,
+//   find-menu-btn-bg-right-color: #383838,
+//   find-menu-btn-text-color: #7c7c7c,
+
+//   find-selected-songs-header: #7c7c7c,
+//   find-selected-songs-item-title: #7c7c7c,
+//   find-selected-songs-item-frequency: #a0a0a0,
+
+//   find-recommendation-type-header: #7c7c7c,
+//   find-recommendation-type-text: #7c7c7c,
+//   find-recommendation-type-text-supplement: #353535,
+// )

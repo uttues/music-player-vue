@@ -2,6 +2,7 @@
 
 * 先用assets存放所用的图/字体，后期将icon移出来，对比打包【前端工具使用上的优化】利用缓存？
 * 图标用icon-font还是小图片？
+* 先用scss实现主题切换，之后尝试拆分css “前端换肤”
 
 #### 2.icon-font 使用方法
 
@@ -57,4 +58,4 @@ https://forum.vuejs.org/t/is-event-delegation-necessary/3701/2
   }
   ```
 
-  
+  7.换肤方案实现+整理

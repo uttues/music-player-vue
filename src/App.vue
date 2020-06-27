@@ -17,4 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  @include common-bg-color(bg)
+}
 </style>
