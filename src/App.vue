@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+import { TOGGLE_THEME } from 'store/mutation-types.js'
 import Header from "components/header";
 
 export default {
@@ -14,17 +16,13 @@ export default {
     components: {
         Header
     },
-    data() {
-        return {
-            theme: 'day'
-        }
-    },
     methods: {
+        ...mapMutations([TOGGLE_THEME]),
         testTransferTheme(){
-            this.theme = this.theme === 'day' ? 'night' : 'day'
+            this.$store.commit(TOGGLE_THEME)
             document.documentElement.setAttribute(
                 "data-theme",
-                this.theme,
+                this.$store.state.theme,
             );
         }
     }
