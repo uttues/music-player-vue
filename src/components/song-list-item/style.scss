@@ -6,22 +6,22 @@
         display: inline-block;
     }
     img {
-        border-radius: .08rem;
+        border-radius: 8px;
     }
     .play-count {
         position: absolute;
-        top: .03rem;
+        top: 3px;
         right: .6em;
         color: #fff;
-        font-size: .13rem;
+        font-size: 13px;
         .icon-bofang::before {
-            font-size: .13rem;
+            font-size: 13px;
             display: inline-block;
             transform: scale(.8);
         }
     }
     p {
-        margin: .02rem auto;
+        margin: 2px auto;
         line-height: 1.3;
         @include common-font-color(song-list-item-text);
 

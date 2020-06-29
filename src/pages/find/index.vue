@@ -1,6 +1,10 @@
 <template>
     <div>
-        <SongListItem />
+        <SongListItem :playCount="222"
+          name="没事别拍我，我还以为是爱情来了"
+          img-url="http://p2.music.126.net/F_4tKddfa70mArodvqxSbg==/109951165083020150.jpg"
+          :id="5077259684" 
+        />
     </div>
 </template>
 

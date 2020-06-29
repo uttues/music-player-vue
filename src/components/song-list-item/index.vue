@@ -2,7 +2,7 @@
     <!-- 可以把最外层直接去掉嘛？ -->
     <div class="song-list-item-wrapper">
         <img :style="{'width': size, 'height': size}"
-             :src="imgURL"
+             :src="imgUrl"
              alt="">
         <span class="play-count">
             <i class="iconfont icon-bofang" />
@@ -15,23 +15,14 @@
 <script>
 export default {
     props: {
-        // playCount: Number,
-        // name: String,
-        // imgURL: String,
-        // id: Number,
+        playCount: Number,
+        name: String,
+        imgUrl: String,
+        id: Number,
         size: {
           type: String,
           default: '150px'
         }
-    },
-    data() {
-        return {
-            playCount: 112739,
-            name: "没事别拍我，我还以为是爱情来了",
-            imgURL:
-                "http://p2.music.126.net/F_4tKddfa70mArodvqxSbg==/109951165083020150.jpg",
-            id: 5077259684
-        };
     }
 };
 </script>
