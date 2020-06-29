@@ -1,3 +1,13 @@
+// 1.文本省略
+// 使用时需设置 width，超出部分出现省略号（传入行数）
+@mixin text-omission($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// 主题切换
 @mixin common-bg-color($key) {
   background-color: map-get($common-fill-color-day, $key);
   [data-theme="night"] & {
