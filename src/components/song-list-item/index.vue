@@ -1,24 +1,29 @@
 <template>
     <!-- 可以把最外层直接去掉嘛？ -->
     <div class="song-list-item-wrapper">
-        <img :src="imgURL"
+        <img :style="{'width': size, 'height': size}"
+             :src="imgURL"
              alt="">
         <span class="play-count">
             <i class="iconfont icon-bofang" />
             <span>{{ playCount }}</span>
         </span>
-        <p>{{ name }}</p>
+        <p :style="{'width': size}">{{ name }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    // props: {
-    //     playCount: Number,
-    //     name: String,
-    //     imgURL: String,
-    //     id: Number
-    // }
+    props: {
+        // playCount: Number,
+        // name: String,
+        // imgURL: String,
+        // id: Number,
+        size: {
+          type: String,
+          default: '150px'
+        }
+    },
     data() {
         return {
             playCount: 112739,
