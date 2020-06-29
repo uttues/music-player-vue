@@ -9,12 +9,16 @@ $common-fill-color-night: (
 $common-font-color-day: (
   header-btn-icon: #7f7f80,
   header-text-active: #7f7f80,
-  header-text-dark: #3a3a3a
+  header-text-dark: #3a3a3a,
+
+  song-list-item-text: #333,
 );
 $common-font-color-night: (
   header-btn-icon: #a19e9e,
   header-text-active: #7d7d7d,
-  header-text-dark: #3a3a3a
+  header-text-dark: #3a3a3a,
+
+  song-list-item-text: #787878,
 );
 
 // 发现页面

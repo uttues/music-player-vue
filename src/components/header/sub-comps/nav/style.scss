@@ -1,6 +1,5 @@
 .nav-links {
     display: flex;
-    font-size: 12px;
 
     .nav-item {
         @include common-font-color(header-text-dark);

@@ -1,3 +1,6 @@
+body {
+    font-size: 12px;
+}
 ol, ul {
     list-style: none;
 }

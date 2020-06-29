@@ -38,7 +38,7 @@ https://github.com/staven630/vue-cli4-config#alias
 
 https://github.com/staven630/vue-cli4-config#globalscss 
 
-#### 5. 
+
 
 
 
@@ -223,5 +223,30 @@ module.exports = {
     publicPath:'/foo/',
     ...
 }
+```
+
+
+
+
+
+#### 5. chrome不能设置font-size小于12px的
+* https://www.phpsong.com/2515.html
+```css
+.icon-bofang {
+    display: inline-block;
+    transform: scale(.8);
+}
+```
+
+
+#### 6. 实现两行文本，超出用省略号表示
+```css
+p {
+        width: 100px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 ```
 
