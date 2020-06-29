@@ -60,3 +60,42 @@ https://forum.vuejs.org/t/is-event-delegation-necessary/3701/2
   ```
 
   7.换肤方案实现+整理
+
+
+
+9.创建全局过滤器（需要全局注册）
+
+https://blog.csdn.net/qq_39905409/article/details/101053268
+
+常用过滤器：https://www.cnblogs.com/kzxiaotan/p/11676459.html
+
+
+
+10,.四舍五入方法比较（round和fixed）
+
+https://www.jb51.net/article/126804.htm
+
+
+
+11. 在git add 命令后 如何撤销已经加入到暂存区的文件呢？
+
+	1.git reset HEAD -- . 撤销所有
+	 2.git reset HEAD -- filename 撤销特定目标
+	 3.git rm -cached filepath 将文件从缓存中删除
+
+	
+
+	1人点赞
+
+	
+
+	[git]()
+
+	
+
+	
+
+	作者：EastwardFlow
+	链接：https://www.jianshu.com/p/77846616e873
+	来源：简书
+	著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
