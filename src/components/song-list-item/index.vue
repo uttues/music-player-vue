@@ -1,5 +1,5 @@
+<!-- 展示歌单item，可传入size来控制大小 -->
 <template>
-    <!-- 可以把最外层直接去掉嘛？ -->
     <div class="song-list-item-wrapper">
         <img :style="{'width': size, 'height': size}"
              :src="imgUrl"
@@ -20,8 +20,8 @@ export default {
         imgUrl: String,
         id: Number,
         size: {
-          type: String,
-          default: '150px'
+            type: String,
+            default: "150px"
         }
     }
 };

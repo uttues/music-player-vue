@@ -34,6 +34,8 @@ $find-fill-color-night: (
 $find-font-color-day: (
   netease-color: #ff3a3a,
 
+  right-top-btn-text: #333,
+
   find-menu-btn-icon: #fff,
   find-menu-btn-text: #333,
 
@@ -47,6 +49,8 @@ $find-font-color-day: (
 );
 $find-font-color-night: (
   netease-color: #902b2b,
+
+  right-top-btn-text: #7c7c7c,
   
   find-menu-btn-icon: #fff,
   find-menu-btn-text: #7c7c7c,
@@ -61,10 +65,10 @@ $find-font-color-night: (
 );
 
 $find-border-color-day: (
-  find-single-border-color: #e6e6e6,
+  right-top-btn-border: #e6e6e6,
 );
 $find-border-color-night: (
-  find-single-border-color: #1d1d1d,
+  right-top-btn-border: #1d1d1d,
 );
 
 

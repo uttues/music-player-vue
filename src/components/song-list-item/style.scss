@@ -15,9 +15,10 @@
         color: #fff;
         font-size: 13px;
         .icon-bofang::before {
-            font-size: 13px;
+            margin-right: 2px;
             display: inline-block;
             transform: scale(.8);
+            font-size: 13px;
         }
     }
     p {
