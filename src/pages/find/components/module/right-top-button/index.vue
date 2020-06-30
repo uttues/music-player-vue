@@ -1,10 +1,10 @@
 <!-- 传入参数：text，如果需要显示icon，包裹着i标签传入即可 -->
 <template>
     <a class="right-top-btn-wrapper"
-       href="#">
+       :href="btnHref">
         <span>
             <slot></slot>
-            {{ text }}
+            {{ btnText }}
         </span>
     </a>
 </template>
@@ -12,7 +12,11 @@
 <script>
 export default {
     props: {
-        text: String
+        btnText: String,
+        btnHref: {
+            type: String,
+            default: "#"
+        }
     }
 };
 </script>

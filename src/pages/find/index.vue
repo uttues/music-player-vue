@@ -1,19 +1,12 @@
 <template>
     <div>
-        <SongListItem :playCount="222"
-                      name="没事别拍我，我还以为是爱情来了"
-                      img-url="http://p2.music.126.net/F_4tKddfa70mArodvqxSbg==/109951165083020150.jpg"
-                      :id="5077259684" />
-        <RightTopButton text="播放全部">
-            <i class="iconfont icon-bofang1" />
-        </RightTopButton>
+        <SelectedSongList />
     </div>
 </template>
 
 <script>
 import apis from "apis";
-import SongListItem from "components/song-list-item";
-import RightTopButton from "./components/right-top-button";
+import SelectedSongList from './components/selected-song-list'
 export default {
     mounted() {
         apis.find.getSelectedSongLists("全部", 200).then(res => {
@@ -33,8 +26,7 @@ export default {
         // });
     },
     components: {
-        SongListItem,
-        RightTopButton
+        SelectedSongList
     }
 };
 </script>
