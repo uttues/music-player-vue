@@ -265,3 +265,33 @@ mouseleave: 不冒泡
 mouseout：冒泡
 不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件
 只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件
+7.
+
+#### 7、轮播图相关
+
+难点：性能优化：
+
+* 尽量减少transition（动画）【animating，来控制需要transition的元素、touching同理】
+* 尽量不操作DOM结点，操作数据=》视图层改变
+
+难点：通信复杂
+
+swiper传入 animDuration属性，作用于swiperItem
+
+（用到了隔代组件通信=》方案取消，下面这种结构不可用？）
+
+```vue
+<template>
+  <div class="frame">
+    <Swiper height='150px' :anim-duration="500">
+      <SwiperItem
+        v-for="(item, index) in 8"
+        :key="index"
+        :index="index"
+      />
+    </Swiper>
+  </div>
+</template>
+```
+
+后面用的方案是，将animDuration放在是swiper上，子组件不保留该属性，但直接用该属性来生成计算属性
