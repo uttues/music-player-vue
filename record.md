@@ -252,3 +252,16 @@ p {
 
 #### 7.插槽的使用（具名插槽）
 
+
+#### 8.vue中元素的hover事件
+vue中元素的没有hover事件，可以用鼠标事件模拟 @mouseenter    @mouseleave   @mouseover  @mouseout
+进入
+mouseenter：不冒泡
+mouseover: 冒泡
+不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件
+只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件
+移出
+mouseleave: 不冒泡
+mouseout：冒泡
+不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件
+只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件
