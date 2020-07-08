@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="ready"
+    v-show="ready"
     class="swiper-item"
     :class="{
       'swiper-item-card': modeType === 'card',
@@ -111,10 +111,15 @@ export default {
   },
   created() {
     this.throttleHandleCardClick = throttle(this.handleCardClick, 1300, true);
+    this.$parent && this.$parent.updateItems();
+
   },
   mounted() {
     this.modeType = this.$parent.modeType;
     this.edgeCardScale = this.$parent.edgeCardScale;
+  },
+  destroyed() {
+    this.$parent && this.$parent.updateItems();
   },
   methods: {
     /**
@@ -181,8 +186,6 @@ export default {
      * (列表中只有两个元素需要移动，旧的activeIndex（左移移走），新的activeIndex（左移移入）？？？)
      */
     slideTranslateItem(index, activeIndex, oldIndex) {
-      console.log("slideTranslateItem");
-
       // isAnimating 两种情况
       //  ● 主角
       //  ● 处于两主角中间，并且不是 itemscount - 1 => 0
@@ -199,6 +202,7 @@ export default {
 
       // 计算当前元素的Translate并修改 => 触发新的style计算，动态样式
       this.translate = this.updateTranslate(index, activeIndex);
+      console.log('this.ready = true', this.ready);
       this.ready = true;
     },
 
