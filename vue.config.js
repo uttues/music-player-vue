@@ -14,6 +14,7 @@ module.exports = {
             .set("@", resolve("src"))
             .set("apis", resolve("src/apis"))
             .set("assets", resolve("src/assets"))
+            .set("base", resolve("src/base"))
             .set("components", resolve("src/components"))
             .set("constants", resolve("src/constants"))
             .set("pages", resolve("src/pages"))
