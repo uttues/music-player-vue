@@ -181,6 +181,8 @@ export default {
      * (列表中只有两个元素需要移动，旧的activeIndex（左移移走），新的activeIndex（左移移入）？？？)
      */
     slideTranslateItem(index, activeIndex, oldIndex) {
+      console.log("slideTranslateItem");
+
       // isAnimating 两种情况
       //  ● 主角
       //  ● 处于两主角中间，并且不是 itemscount - 1 => 0

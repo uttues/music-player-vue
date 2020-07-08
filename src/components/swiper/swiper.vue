@@ -169,6 +169,8 @@ export default {
   },
   watch: {
     activeIndex(val, oldVal) {
+      console.log("activeIndex");
+
       this.resetItemsPosition(oldVal);
       this.$emit("change", val, oldVal);
       // 如果要设置“是否循环播放”，只需要添加下面这一行if判断
@@ -259,6 +261,10 @@ export default {
      * 根据子组件的name属性，更新 swiper-item 组件列表items
      */
     updateItems() {
+      console.log("updateItems");
+
+      console.log(this.items);
+
       this.items = this.$children.filter(
         child => child.$options.name === "SwiperItem"
       );
@@ -275,6 +281,7 @@ export default {
           item.slideTranslateCardItem(index, this.activeIndex, oldIndex);
         });
       } else {
+        console.log(this.items);
         this.items.forEach((item, index) => {
           item.slideTranslateItem(index, this.activeIndex, oldIndex);
         });
