@@ -83,19 +83,33 @@ https://www.jb51.net/article/126804.htm
 	 2.git reset HEAD -- filename 撤销特定目标
 	 3.git rm -cached filepath 将文件从缓存中删除
 
-	
 
-	1人点赞
 
-	
 
-	[git]()
 
-	
+13. 移动端适配处理
 
-	
+淘宝https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html
 
-	作者：EastwardFlow
-	链接：https://www.jianshu.com/p/77846616e873
-	来源：简书
-	著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```xml
+<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+```
+
+```js
+// rem.js
+(function () {
+    const docEl = document.documentElement;
+    const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    const recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+    };
+
+    if (!document.addEventListener) return;
+    window.addEventListener(resizeEvt, recalc, false);
+    document.addEventListener('DOMContentLoaded', recalc, false);
+})()
+```
+
+在main.js中import引入 rem.js，之后按照750px的设计稿编写样式即可
