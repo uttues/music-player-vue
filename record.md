@@ -295,3 +295,17 @@ swiper传入 animDuration属性，作用于swiperItem
 ```
 
 后面用的方案是，将animDuration放在是swiper上，子组件不保留该属性，但直接用该属性来生成计算属性
+
+#### 9.CSS积累：边框小三角
+
+```css
+.triangle-border {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-bottom: none;
+    border-right: none;
+}
+```
+
