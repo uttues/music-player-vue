@@ -10,6 +10,7 @@
       @mouseenter="isHover = true"
       @mouseleave="isHover = false"
     >
+      {{$children}}
       <slot></slot>
     </div>
     <a
@@ -262,9 +263,7 @@ export default {
       this.items = this.$children.filter(
         child => child.$options.name === "SwiperItem"
       );
-      this.setActiveItem(this.initialIndex);
     },
-
     /**
      * 调用每个swiper-item组件的 slideTranslateItem，触发元素移动
      * （负责定时器、按钮类型的轮播）
@@ -416,11 +415,18 @@ export default {
     );
   },
   mounted() {
+    // mouted()，是在子组件都创建好了的时候吗？？？后端数据是否返回
+    this.updateItems();
+    console.log(this.items);
     this.$nextTick(() => {
+      console.log(this.items);
       addResizeListener(this.$el, this.resetItemsPosition);
       // 让prop初始化data，而autoAnimDuration在后期会因为各种操作而修改
+      //后端请求数据到达 => 更新items => 设置activeItem，触发一系列动作
       this.autoAnimDuration = this.slideDuration;
-      this.updateItems();
+      if (this.initialIndex < this.items.length && this.initialIndex >= 0) {
+        this.setActiveItem(this.initialIndex);
+      }
       this.startTimer();
     });
   },

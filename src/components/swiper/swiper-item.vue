@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="ready"
+    v-show="ready"
     class="swiper-item"
     :class="{
       'swiper-item-card': modeType === 'card',
@@ -111,6 +111,7 @@ export default {
   },
   created() {
     this.throttleHandleCardClick = throttle(this.handleCardClick, 1300, true);
+    this.$parent && this.$parent.updateItems();
   },
   mounted() {
     this.modeType = this.$parent.modeType;
@@ -210,6 +211,7 @@ export default {
 
       // 计算当前元素的Translate并修改 => 触发新的style计算，动态样式
       this.translate = this.updateTranslate(index, activeIndex);
+      console.log("this.ready = true", this.ready);
       this.ready = true;
     },
 

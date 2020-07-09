@@ -93,3 +93,24 @@ https://zhidao.baidu.com/question/1372223252875581259.html?fr=iks&word=%D3%C3sco
 }
 ```
 
+
+
+出现的问题1：
+
+* 问题：将items作为Swiper组件的data()，mounted()回调中去更新它的值，然后调用更新activeItem值，触发一系列动作，更新轮播图 。乍一看没什么问题，用静态数据测试的时候也没什么毛病，将轮播图放到项目中却半天渲染不出SwiperItem组件
+* 原因：项目中的轮播图数据一般都是后端i请求过来的，也就是说一开始 v-for 时，轮播图数组可能是为空的！然而这个时候已经执行了 updateItem()，给items赋了一个空数组的值，后期更新不了
+* 解决方案：将items作为computed，依赖于轮播图数据，用watcher监视其值的变化，发生改变时（数据请求过来了）就去调用setActiveItem
+	* *后端请求数据到达 => 更新items => 设置activeItem，触发一系列动作*
+
+```js
+updateItems() {
+  this.items = this.$children.filter(
+    child => child.$options.name === "SwiperItem"
+  );
+  this.setActiveItem(this.initialIndex);
+},
+```
+
+！！！坑 $children 不是响应式的，即使后面后端请求的数据到达，this.$children仍然为空，不会触发更新items
+
+https://www.cnblogs.com/wuxianqiang/p/10472972.html
