@@ -424,6 +424,7 @@ export default {
 };
 </script>
 
+
 <style scope>
 .swiper {
   position: relative;
@@ -455,22 +456,22 @@ li {
 }
 .swiper-indicator-container {
   position: absolute;
-  bottom: 2%;
+  bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
 }
 .swiper-indicator {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   margin: 0 2px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: rgb(238, 238, 238, 0.3);
   cursor: pointer;
 }
 .swiper-indicator-active {
-  background-color: #ff1e32;
+  background-color: #ff575e;
 }
 
 /* 箭头按钮slot中的默认样式 */
