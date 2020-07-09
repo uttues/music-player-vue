@@ -1,3 +1,24 @@
-.banner-item {
-    background-color: #f98;
+.banner-swiper-container {
+  text-align: center;
+}
+.banner-item{
+  position: relative;
+  vertical-align: bottom;
+  img{
+    width: 6.84rem;
+    border-radius: .1rem;
+    vertical-align: bottom;
+  }
+  .banner-item-mark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    border-top-left-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+
+    padding: .12rem .14rem .12rem .16rem;
+    color: #fff;
+    font-size: 10px;
+  }
 }

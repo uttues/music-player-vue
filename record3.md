@@ -55,3 +55,13 @@ SQ #fe7d4c
 
 
 https://zhidao.baidu.com/question/1372223252875581259.html?fr=iks&word=%D3%C3scoped%C7%EB%B2%BB%D2%AA%D6%B1%BD%D3%D3%C3%B1%EA%C7%A9%2C%BD%A8%D2%E9%D3%C3class%BB%F2%D5%DFid.%B2%BB%C8%BB%BB%E1%D3%B0%CF%EC%E4%D6%C8%BE%CB%D9%B6%C8&ie=gbk
+
+
+
+
+
+
+
+图片底部空隙问题（对齐）
+
+![image-20200709140543370](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200709140543370.png)
