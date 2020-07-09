@@ -1,0 +1,18 @@
+.retangle-card-wrapper {
+    width: 6.28rem;
+    height: 1.16rem;
+    border-radius: .1rem;
+    background-color: #ccc;
+    display: flex;
+    img {
+        width: 1.16rem;
+        height: 1.16rem;
+        border-radius: .1rem;
+    }
+    .song-name {
+        font-size: .28rem;
+    }
+    .singer-info {
+        font-size: .22rem;
+    }
+}

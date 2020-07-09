@@ -9,7 +9,6 @@ export default {
         var res;
         // eg: 123456789 => 12 => 1.2 
         if (num.length > 8) {
-            console.log(num.slice(0, -3));
             res = Math.round(Number(num.slice(0, -7)) / 10) + '亿'
         } else if (num.length > 4) {
             res = Math.round(Number(num.slice(0, -3)) / 10) + '万'

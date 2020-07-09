@@ -2,8 +2,13 @@ import axios from 'apis/axios'
 
 import {
     bannerSwiperList,
-    selectedSongLists,
-    songListCategory,
+    selectedSonglists,
+
+    hotSonglistCategory,
+    songlistDetail,
+    songDetail,
+    albumContent,
+
     newDish,
     newSongs
 } from './config'
@@ -16,7 +21,6 @@ export default {
      */
     getBannerSwiperList(type = 0) {
         // 怎么传递参数？？
-        console.log('getBannerSwiperList接口被调用了：' + bannerSwiperList + `type=${type}`);
         return axios.get(bannerSwiperList + `?type=${type}`)
     },
 
@@ -27,23 +31,62 @@ export default {
      * @param{number}limit 取出歌单数量 , 默认为 20
      * @param{number}before 分页参数，取上一页最后一个歌单的 updateTime 获取下一页数据
      */
-    getSelectedSongLists(cat = '全部', limit = 20, before) {
-        console.log('getSelectedSongLists接口被调用了：' + selectedSongLists + params);
+    getSelectedSonglists(cat = '全部', limit = 20, before) {
+        console.log(`${selectedSonglists}?cat=${cat}&limit=${limit}`);
+
         const params = {
             cat,
             limit,
             before
         }
-        return axios.get(selectedSongLists, params)
+        return axios.get(selectedSonglists, params)
+    },
+    /**
+     * 获取歌单分类,包含 category 信息
+     */
+    getHotSonglistCategory() {
+        return axios.get(hotSonglistCategory)
+    },
+    /**
+     * 获取歌单详情
+     * @param {string}} id 歌单的id
+     */
+    getSonglistDetail(id) {
+        console.log(`${songlistDetail}?id=${id}`);
+        return axios.get(`${songlistDetail}?id=${id}`)
+    },
+    /**
+     * 获取歌曲详情(支持同时传入多个 id, 用,隔开), 歌曲封面现在需要通过专辑内容接口获取)
+     * @param {string}} ids 
+     */
+    getSongDetail(ids) {
+        console.log(`${songDetail}?id=${ids}`)
+        return axios.get(`${songDetail}?id=${ids}`)
+    },
+    /**
+     * 获取专辑(支持同时传入多个 id, 用,隔开), 歌曲封面现在需要通过专辑内容接口获取)
+     * @param {string}} id
+     */
+    getAlbumContent(id) {
+        console.log(`${albumContent}?id=${id}`)
+        return axios.get(`${albumContent}?id=${id}`)
     },
 
-    /**
-    * 获取歌单分类,包含 category 信息
-    */
-    getSongListCategory() {
-        console.log('getSongListCategory接口被调用了：' + songListCategory);
-        return axios.get(songListCategory)
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**

@@ -42,9 +42,9 @@ export default {
     SongListItem
   },
   mounted() {
-    apis.find.getSelectedSongLists("全部", 6).then(res => {
+    apis.find.getSelectedSonglists("全部", 6).then(res => {
+      // 补充洗牌算法
       this.songLists = res.data.playlists.slice(0, 6);
-      console.log(this.songLists);
     });
   }
 };

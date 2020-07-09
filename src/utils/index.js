@@ -81,3 +81,11 @@ export const debounce = function (callback, delay, atBegin = false) {
     }
 }
 
+/**
+ * 获取两个数之间的随机整数
+ * @param {Number} start 随机数的可选起点
+ * @param {Number} end 随机数的可选终点
+ */
+export const randomNumGenerator = (start, end) => {
+    return Math.floor(Math.random() * (end - start) + start)
+}
