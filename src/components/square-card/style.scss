@@ -1,0 +1,36 @@
+.square-card-wrapper {
+  position: relative;
+  cursor: pointer;
+  a {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  img {
+    box-sizing: border-box;
+    vertical-align: bottom;
+    border: 1px solid rgba($color: #eee, $alpha: .1);
+    border-radius: .1rem;
+  }
+  p {
+      margin-top: .05rem;
+      font-size: .24rem;
+      line-height: 1.5;
+      @include common-font-color(song-list-item-text);
+      @include text-omission(2)
+  }
+  .play-count {
+    position: absolute;
+    top: .12rem;
+    right: .14rem;
+    font-size: .4rem;
+    color: #fff;
+    transform-origin: top right;
+    transform: scale(.5);
+    .iconfont.icon-bofang {
+      margin-right: .02rem;
+      font-size: .4rem;
+      transform: scale(.8);
+      display: inline-block;
+    }
+  }
+}

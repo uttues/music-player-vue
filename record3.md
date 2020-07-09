@@ -65,3 +65,31 @@ https://zhidao.baidu.com/question/1372223252875581259.html?fr=iks&word=%D3%C3sco
 图片底部空隙问题（对齐）
 
 ![image-20200709140543370](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200709140543370.png)
+
+* 图片display：block
+
+* 图片，与其父元素，设置vertical-align: bottom;
+
+
+
+解决chrome最小字号限制的问题
+
+![image-20200709150939777](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200709150939777.png)
+
+```scss
+.play-count {
+  position: absolute;
+  top: .12rem;
+  right: .14rem;
+  font-size: .4rem; // 设置字体大小为20px
+  transform-origin: top right;
+  transform: scale(.5); // 缩小到原来的一半 10px
+  .iconfont.icon-bofang {
+    margin-right: .02rem;
+    font-size: .4rem;
+    transform: scale(.8);	// 在0.8的基础上再缩小
+    display: inline-block;  // 加上这一行scale才有效
+  }
+}
+```
+
