@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SelectedSongList from "./components/selected-song-list";
+import SelectedSongList from "./components/selected-songlist";
 import BannerSwiper from "./components/banner-swiper";
 export default {
   components: {

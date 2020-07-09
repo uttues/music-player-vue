@@ -12,10 +12,7 @@
         v-for="(item, index) in banners"
         :key="index"
       >
-        <a
-          class="banner-item"
-          :href="url"
-        >
+        <a class="banner-item">
           <img
             :src="item.imageUrl"
             alt

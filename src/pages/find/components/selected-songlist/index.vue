@@ -6,9 +6,9 @@
       <template v-slot:module-btn-icon>
         <i class="iconfont icon-bofang1" />
       </template>
-      <div class=song-lists-container>
+      <div class=songlists-container>
         <SongListItem
-          class="song-list-card"
+          class="songlist-card"
           v-for="item in songLists"
           :key="item.id"
           :playCount="item.playCount"
