@@ -1,16 +1,17 @@
 .right-top-btn-wrapper {
-    padding: 4px 10px;
-    border: 1px solid;
-    border-radius: 13px;
+    padding: .06rem .22rem;
+    border: .01rem solid;
+    border-radius: .25rem;
     @include find-border-color(right-top-btn-border);
     span {
-        font-size: 12px;
+        font-size: .24rem;
+        line-height: .34rem;
         @include find-font-color(right-top-btn-text);
         i {
-            margin-right: -3px;
+            margin-right: -.04rem;
             display: inline-block;
             transform: scale(.8);
-            font-size: 13px;
+            font-size: .24rem;
         }
     }
 }
