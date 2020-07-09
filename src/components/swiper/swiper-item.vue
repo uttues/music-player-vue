@@ -115,6 +115,14 @@ export default {
   mounted() {
     this.modeType = this.$parent.modeType;
     this.edgeCardScale = this.$parent.edgeCardScale;
+    if (this.$parent && this.$parent.$options.name === "Swiper") {
+      this.$parent.updateItems();
+    }
+  },
+  destroyed() {
+    if (this.$parent && this.$parent.$options.name === "Swiper") {
+      this.$parent.updateItems();
+    }
   },
   methods: {
     /**
@@ -158,7 +166,7 @@ export default {
     },
 
     updateCardTranslate(index, activeIndex) {
-      const parentWidth = this.$parent.$el.offsetWidth;
+      const parentWidth = this.$parent.$el["offsetWidth"];
       if (this.onEdge || this.isCenter) {
         return (
           (parentWidth *
@@ -181,8 +189,6 @@ export default {
      * (列表中只有两个元素需要移动，旧的activeIndex（左移移走），新的activeIndex（左移移入）？？？)
      */
     slideTranslateItem(index, activeIndex, oldIndex) {
-      console.log("slideTranslateItem");
-
       // isAnimating 两种情况
       //  ● 主角
       //  ● 处于两主角中间，并且不是 itemscount - 1 => 0
