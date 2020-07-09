@@ -8,7 +8,7 @@
       'touching': isTouching,
       'on-edge': onEdge,
       'is-center': isCenter,
-      'is-following': isFollowDrag
+      'is-following': isFollowDrag,
 		}"
     :style="itemStyle"
     @click="throttleHandleCardClick"
@@ -254,7 +254,10 @@ export default {
 
       if (this.modeType !== "card") {
         // 相邻的 Math.abs(index - activeIndex) <= 1 或者 同为列表边界
-        this.isTouching = Math.abs(index - activeIndex) <= 1;
+        this.isTouching =
+          Math.abs(index - activeIndex) <= 1 ||
+          (index === 0 && activeIndex === this.itemsCount - 1) ||
+          (index === this.itemsCount - 1 && activeIndex === 0);
       } else {
         this.isTouching = Math.abs(index - activeIndex) <= 2;
         if (!this.isTouching) {

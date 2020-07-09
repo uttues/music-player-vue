@@ -43,8 +43,8 @@
         :class="{'swiper-indicator-active': activeIndex === index}"
         v-for="(item, index) in items"
         :key="`swiper-indicator-${index}`"
-        @click="handleIndicatorSwitch(index)"
-        @mouseenter="throttleHandleIndicatorSwitch(index)"
+        @click="handleIndicatorClick(index)"
+        @mouseenter="handleIndicatorMouse(index)"
       >
       </li>
     </ul>
@@ -321,7 +321,14 @@ export default {
     /**
      * 指示器切换滑动：点击下标为index的 指示器
      */
-    handleIndicatorSwitch(index) {
+    handleIndicatorClick(index) {
+      if (this.handleIndicationType === "hover") return;
+      this.playSlide(index - this.activeIndex, false);
+    },
+    /**
+     * 指示器切换滑动：hover下标为index的 指示器 (分成两个函数的原因：防止hover下click触发两次)
+     */
+    handleIndicatorMouse(index) {
       this.playSlide(index - this.activeIndex, false);
     },
 
@@ -395,9 +402,9 @@ export default {
     }
   },
   created() {
-    this.throttleHandleIndicatorSwitch = throttle(
+    this.throttleHandleIndicatorMouse = throttle(
       this.handleIndicationType === "hover"
-        ? this.handleIndicatorSwitch
+        ? this.handleIndicatorMouse
         : () => {},
       300,
       true
