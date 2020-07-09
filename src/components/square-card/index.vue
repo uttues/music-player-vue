@@ -23,7 +23,6 @@ export default {
     playCount: Number,
     name: String,
     imgUrl: String,
-    id: Number,
     size: {
       type: String,
       default: "150px"
