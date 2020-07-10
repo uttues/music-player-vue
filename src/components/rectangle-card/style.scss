@@ -44,10 +44,7 @@
     @include border-repo(color-border-1);
     border-radius: 50%;
     .icon-bofang1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include vertical-horizontal-center();
 
       @include font-color-repo(color-primary);
       font-size: .20rem;

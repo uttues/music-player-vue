@@ -1,0 +1,28 @@
+.menu-btn-wrapper {
+  position: relative;
+  display: block;
+  width: 1rem;
+  height: 1.36rem;
+  text-align: center;
+  .btn-icon {
+    position: relative;
+    display: block;
+    width: .92rem;
+    height: .92rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    @include bg-linear(to right, color-menu-btn-bg-left, color-menu-btn-bg-right);
+    .iconfont {
+      @include vertical-horizontal-center();
+      font-size: .48rem;
+      color: $color-white;
+    }
+  }
+  .btn-text {
+    display: inline-block;
+    width: 1rem;
+    margin-top: .08rem;
+    font-size: .24rem;
+    @include font-color-repo(color-text-3);
+  }
+}

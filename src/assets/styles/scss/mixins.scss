@@ -1,20 +1,3 @@
-// 1.文本省略（多行）
-// 使用时需设置 width，超出部分出现省略号（传入行数）
-@mixin text-omission-multi($line) {
-  display: -webkit-box;
-  -webkit-line-clamp: $line;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-// 2.文本省略（单行）
-// 使用时需设置 width，超出部分出现省略号（传入行数）
-@mixin text-omission-single() {
-  overflow: hidden;
-  text-overflow: ellipsis; //超出部分以省略号显示
-  white-space: nowrap;
-}
-
-
 // 背景色
 @mixin background-color-repo($key) {
   background-color: map-get($--day, $key);
@@ -22,7 +5,13 @@
     background-color: map-get($--night, $key);
   }
 }
-
+// 渐变背景色（感觉处理得很不好？）
+@mixin bg-linear($direction, $start, $end) {
+  background: linear-gradient($direction, map-get($--day, $start),map-get($--day, $end));
+  [data-theme="night"] & {
+    background: linear-gradient($direction, map-get($--night, $start),map-get($--night, $end));
+  }
+}
 // 字体色
 @mixin font-color-repo($key) {
   color: map-get($--day, $key);
@@ -40,3 +29,38 @@
   }
 }
 
+
+
+
+// 1.文本省略（多行）
+// 使用时需设置 width，超出部分出现省略号（传入行数）
+@mixin text-omission-multi($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+// 2.文本省略（单行）
+// 使用时需设置 width，超出部分出现省略号（传入行数）
+@mixin text-omission-single() {
+  overflow: hidden;
+  text-overflow: ellipsis; //超出部分以省略号显示
+  white-space: nowrap;
+}
+// 3.垂直水平居中(父元素相对定位)
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin vertical-horizontal-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
