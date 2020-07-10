@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view></router-view>
+    每日推荐
   </div>
 </template>
 
@@ -8,5 +8,6 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "./style.scss";
 </style>
