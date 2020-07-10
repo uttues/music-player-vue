@@ -211,7 +211,6 @@ export default {
 
       // 计算当前元素的Translate并修改 => 触发新的style计算，动态样式
       this.translate = this.updateTranslate(index, activeIndex);
-      console.log("this.ready = true", this.ready);
       this.ready = true;
     },
 

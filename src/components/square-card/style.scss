@@ -8,8 +8,7 @@
   img {
     box-sizing: border-box;
     vertical-align: bottom;
-    @include border-color-repo(color-border-transparent-1);
-    border: .01rem solid;
+    @include border-repo(color-border-transparent-1);
     border-radius: .1rem;
   }
   p {

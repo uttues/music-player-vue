@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+
 // 背景色
 @mixin background-color-repo($key) {
   background-color: map-get($--day, $key);
@@ -24,7 +25,8 @@
 }
 
 // 边框色
-@mixin border-color-repo($key) {
+@mixin border-repo($key, $size:.01rem) {
+  border: $size solid;
   border-color: map-get($--day, $key);
   [data-theme="night"] & {
     border-color: map-get($--night, $key);

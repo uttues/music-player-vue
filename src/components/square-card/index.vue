@@ -25,7 +25,7 @@ export default {
     imgUrl: String,
     size: {
       type: String,
-      default: "150px"
+      default: "1.5rem"
     }
   }
 };
