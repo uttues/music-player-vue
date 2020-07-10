@@ -25,9 +25,6 @@ export default {
     imgUrl: String,
     songName: String,
     singerList: Array
-  },
-  mounted() {
-    console.log(this.singerList);
   }
 };
 </script>

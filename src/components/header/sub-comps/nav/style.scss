@@ -1,15 +1,18 @@
 .nav-links {
-    display: flex;
+  display: flex;
 
-    .nav-item {
-        @include font-color-repo(color-text-2);
-        // 处于点击状态时
-        // @include font-color-repo(color-text-1);
-        // font-size: .36rem;
-        margin: 0 2px;
-        padding: 0 .26rem;
-        font-size: .30rem;
-        line-height: .98rem;
-        cursor: pointer;
+  .nav-item {
+    @include font-color-repo(color-text-2);
+    margin: 0 2px;
+    padding: 0 .26rem;
+    font-size: .30rem;
+    line-height: .98rem;
+    cursor: pointer;
+    &.active {
+      // 处于点击状态时
+      @include font-color-repo(color-text-1);
+      font-size: .36rem;
+      font-weight: 600;
     }
+  }
 }
