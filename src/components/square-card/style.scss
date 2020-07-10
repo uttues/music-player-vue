@@ -8,14 +8,14 @@
   img {
     box-sizing: border-box;
     vertical-align: bottom;
-    @include border-repo(color-border-transparent-1);
+    @include border-repo(color-border-transparent-2);
     border-radius: .1rem;
   }
   p {
     margin-top: .05rem;
     font-size: .24rem;
     @include font-color-repo(color-text-3);
-    @include text-omission(2)
+    @include text-omission-multi(2)
   }
   .play-count {
     position: absolute;

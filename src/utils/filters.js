@@ -17,5 +17,12 @@ export default {
         }
 
         return res
-    }
+    },
+
+    /**
+     * 对于返回的歌曲歌手信息（数组），将名字用斜杠拼接
+     */
+    concatArrayBySlash: arr => {
+        return arr.map(item => item.name).join('/')
+    },
 }

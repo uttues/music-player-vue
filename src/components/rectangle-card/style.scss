@@ -1,18 +1,57 @@
 .retangle-card-wrapper {
-    width: 6.28rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 6.5rem;
+  height: 1.16rem;
+  border-radius: .1rem;
+  img {
+    width: 1.16rem;
     height: 1.16rem;
+    box-sizing: border-box;
     border-radius: .1rem;
-    background-color: #ccc;
-    display: flex;
-    img {
-        width: 1.16rem;
-        height: 1.16rem;
-        border-radius: .1rem;
+    @include border-repo(color-border-transparent-2);
+  }
+  .song-info-wrapper {
+    max-width: 4.32rem;
+    margin-left: .22rem;
+    p {
+      display: flex;
+      align-items: center;
+      font-size: .24rem;
+      @include font-color-repo(color-text-5);
+      .song-name {
+        flex-shrink: 0; // 如果歌手和歌名都需要省略时，不加上这一句，歌手部分会宽度缩小
+        margin-right: .06rem;
+        max-width: 3.24rem;
+        font-size: .3rem;
+        @include font-color-repo(color-text-3);
+        @include text-omission-single();
+      }
+      .singer-info {
+        margin-left: .06rem;
+        @include text-omission-single()
+      }
     }
-    .song-name {
-        font-size: .28rem;
+    
+  }
+  .btn {
+    position: absolute;
+    right: .2rem;
+    box-sizing: border-box;
+    width: .52rem;
+    height: .52rem;
+    @include border-repo(color-border-1);
+    border-radius: 50%;
+    .icon-bofang1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include font-color-repo(color-primary);
+      font-size: .20rem;
+      margin-left: .01rem;
     }
-    .singer-info {
-        font-size: .22rem;
-    }
+  }
 }

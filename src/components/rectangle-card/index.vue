@@ -8,14 +8,13 @@
       <p>
         <span class="song-name">{{ songName }}</span>
         <!-- ar是一个数组，需要经过拼接处理 -->
-        <span class="singler-info"> - {{ singerList }}</span>
+        -
+        <span class="singer-info">{{ singerList | concatArrayBySlash }}</span>
       </p>
-      <!-- <p>
-        <span>{{ label }}</span>
-        <span>{{ description }}</span>
-      </p> -->
     </div>
-    <img src="" />
+    <div class="btn">
+      <i class="iconfont icon-bofang1" />
+    </div>
   </div>
 </template>
 
@@ -26,6 +25,9 @@ export default {
     imgUrl: String,
     songName: String,
     singerList: Array
+  },
+  mounted() {
+    console.log(this.singerList);
   }
 };
 </script>

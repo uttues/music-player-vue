@@ -6,11 +6,11 @@
           class="song-card"
           v-for="item in songs"
           :key="item.id"
-          :songId="item.id"
-          :imgUrl="item.al.picUrl"
-          :songName="item.name"
-          :singleList="item.ar"
-        />
+          :song-id="item.id"
+          :img-url="item.al.picUrl"
+          :song-name="item.name"
+          :singer-list="item.ar"
+        ></SongItemCard>
       </div>
     </Module>
   </div>
@@ -63,7 +63,7 @@ export default {
     updateSongs() {
       apis.find.getSonglistDetail(this.songListId).then(res => {
         this.songs = res.data.playlist.tracks;
-        console.log(this.songs);
+        console.log(this.songs[1].ar);
       });
     }
   }

@@ -1,10 +1,17 @@
-// 1.文本省略
+// 1.文本省略（多行）
 // 使用时需设置 width，超出部分出现省略号（传入行数）
-@mixin text-omission($line) {
+@mixin text-omission-multi($line) {
   display: -webkit-box;
   -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+// 2.文本省略（单行）
+// 使用时需设置 width，超出部分出现省略号（传入行数）
+@mixin text-omission-single() {
+  overflow: hidden;
+  text-overflow: ellipsis; //超出部分以省略号显示
+  white-space: nowrap;
 }
 
 
