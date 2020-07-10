@@ -3,7 +3,7 @@
   .songlist-card {
     margin-right: .2rem;
     &:first-child {
-      margin-left: $common-margin-size;
+      margin-left: $horizontal-edge-margin;
     }
   }
 }

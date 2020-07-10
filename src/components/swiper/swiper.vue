@@ -10,7 +10,6 @@
       @mouseenter="isHover = true"
       @mouseleave="isHover = false"
     >
-      {{$children}}
       <slot></slot>
     </div>
     <a

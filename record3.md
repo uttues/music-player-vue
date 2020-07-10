@@ -114,3 +114,7 @@ updateItems() {
 ！！！坑 $children 不是响应式的，即使后面后端请求的数据到达，this.$children仍然为空，不会触发更新items
 
 https://www.cnblogs.com/wuxianqiang/p/10472972.html
+
+
+CSS的渲染效率-书写高效的CSS
+https://www.cnblogs.com/iswszheng/archive/2009/07/29/1525040.html

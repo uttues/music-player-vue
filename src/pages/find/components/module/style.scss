@@ -1,11 +1,12 @@
 .module-wrapper {
     overflow: hidden;
     .module-header {
-        margin: 0 $common-margin-size .26rem;
+        margin: 0 $horizontal-edge-margin .26rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .module-title {
+            @include font-color-repo(color-text-3);
             font-size: .34rem;
             line-height: .50rem;
         }

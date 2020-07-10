@@ -7,38 +7,27 @@
   overflow: hidden;
 }
 
-// 主题切换
-@mixin common-bg-color($key) {
-  background-color: map-get($common-fill-color-day, $key);
+// 背景色
+@mixin background-color-repo($key) {
+  background-color: map-get($--day, $key);
   [data-theme="night"] & {
-    background-color: map-get($common-fill-color-night, $key);
+    background-color: map-get($--night, $key);
   }
 }
 
-@mixin common-font-color($key) {
-  color: map-get($common-font-color-day, $key);
+// 字体色
+@mixin font-color-repo($key) {
+  color: map-get($--day, $key);
   [data-theme="night"] & {
-    color: map-get($common-font-color-night, $key);
+    color: map-get($--night, $key);
   }
 }
 
-@mixin find-bg-color($key) {
-  background-color: map-get($find-fill-color-day, $key);
+// 边框色
+@mixin border-color-repo($key) {
+  border-color: map-get($--day, $key);
   [data-theme="night"] & {
-    background-color: map-get($find-fill-color-night, $key);
+    border-color: map-get($--night, $key);
   }
 }
 
-@mixin find-font-color($key) {
-  color: map-get($find-font-color-day, $key);
-  [data-theme="night"] & {
-    color: map-get($find-font-color-night, $key);
-  }
-}
-
-@mixin find-border-color($key) {
-  color: map-get($find-border-color-day, $key);
-  [data-theme="night"] & {
-    color: map-get($find-border-color-night, $key);
-  }
-}

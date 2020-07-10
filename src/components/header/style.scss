@@ -5,7 +5,7 @@
     padding: 0 15px;
     
     .btn-menu, .btn-search {
-        @include common-font-color(header-btn-icon);
+        @include font-color-repo(color-icon-1);
         font-size: 16px;
         line-height: 45px;
         cursor: pointer;

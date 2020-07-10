@@ -2,11 +2,11 @@
     padding: .06rem .22rem;
     border: .01rem solid;
     border-radius: .25rem;
-    @include find-border-color(right-top-btn-border);
+    @include border-color-repo(color-border-1);
     span {
         font-size: .24rem;
         line-height: .34rem;
-        @include find-font-color(right-top-btn-text);
+        @include font-color-repo(color-text-3);
         i {
             margin-right: -.04rem;
             display: inline-block;
