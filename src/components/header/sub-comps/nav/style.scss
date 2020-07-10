@@ -2,11 +2,16 @@
   display: flex;
 
   .nav-item {
+    box-sizing: border-box;
+    width: 1.08rem;
+    height: 1.08rem;
+    margin: 0 .02rem;
+    border-radius: 50%;
     @include font-color-repo(color-text-2);
-    margin: 0 2px;
-    padding: 0 .26rem;
     font-size: .30rem;
-    line-height: .98rem;
+    line-height: 1.08rem;
+    margin-top: .08rem;
+    text-align: center;
     cursor: pointer;
     &.active {
       // 处于点击状态时
@@ -16,3 +21,4 @@
     }
   }
 }
+// 两个之间的间隔8rem
