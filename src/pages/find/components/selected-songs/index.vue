@@ -63,7 +63,8 @@ export default {
     updateSongs() {
       apis.find.getSonglistDetail(this.songListId).then(res => {
         this.songs = res.data.playlist.tracks;
-        console.log(this.songs[1].ar);
+        // 先粗略地直接显示3个，后面再处理分组滑动问题
+        this.songs = this.songs.slice(0, 3)
       });
     }
   }

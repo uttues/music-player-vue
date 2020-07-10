@@ -1,18 +1,18 @@
 <template>
   <div>
-    <BannerSwiper />
-    <SelectedSongLists />
-    <SelectedSongs />
+    <BannerSwiper class="banner-swiper" />
+    <SelectedSonglists class="selected-songlists" />
+    <SelectedSongs class="selected-song" />
   </div>
 </template>
 
 <script>
-import SelectedSongLists from "./components/selected-songlists";
+import SelectedSonglists from "./components/selected-songlists";
 import BannerSwiper from "./components/banner-swiper";
 import SelectedSongs from "./components/selected-songs";
 export default {
   components: {
-    SelectedSongLists,
+    SelectedSonglists,
     BannerSwiper,
     SelectedSongs
   }
