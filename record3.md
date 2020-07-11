@@ -134,8 +134,35 @@ a标签与router-link的区别 https://blog.csdn.net/saber04/article/details/967
 
 https://blog.csdn.net/zgh0711/article/details/78677444
 
-bug: a标签换成router-link标签
+bug: a标签换成router-link标签*（在a标签外加一层也不行）=》暂时的解决方案，不用router-link
 
 ![image-20200711080923764](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200711080923764.png)
 
 ![image-20200711080847217](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200711080847217.png)
+
+
+
+
+
+
+
+
+
+后面需要做的事
+
+* 菜单按钮横栏：默认的横向0滚动改为横向滑动效果
+
+* 精选歌曲模块：歌曲分组 + 添加横向滑动效果
+
+* 精选歌单模块：默认的横向0滚动改为横向滑动效果
+
+* 调整日夜模式切换的scss（工程量巨大）：直接用mixin不灵活！！！！！！！最好是直接返回变量值的
+
+* 歌单广场：激活时横条动效（麻烦）
+
+* 歌单广场：不是一个标签一个组件，存在复用
+
+* 歌单广场：下拉加载更多
+
+  
+

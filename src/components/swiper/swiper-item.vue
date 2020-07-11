@@ -295,7 +295,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 .swiper-item {
   position: absolute;
   box-sizing: border-box;

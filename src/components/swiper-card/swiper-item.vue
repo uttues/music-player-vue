@@ -6,7 +6,8 @@
       'swiper-item-card': modeType === 'card',
       'animating': isAnimating,
       'touching': isTouching,
-      'on-edge': onEdge,
+      'on-edge-left': onEdgeLeft,
+      'on-edge-right': onEdgeRight,
       'is-center': isCenter,
       'is-following': isFollowDrag,
 		}"
@@ -34,14 +35,15 @@ export default {
 
       // modeType：模式类型，值为card表示卡片式
       // edgeCardScale：两侧卡片scale的比例
-      // onEdge：是否位于两侧
+      // onEdgeLeft：是否位于左侧
+      // onEdgeRight：是否位于右侧
       // isCenter: 是否位于舞台中心
       modeType: "",
       edgeCardScale: 0,
-      onEdge: false,
+      onEdgeLeft: false,
+      onEdgeRight: false,
       isCenter: false,
       isFollowDrag: false,
-
       // ready：updateItems时会对item进行位置初始化，初始化完毕之后再进行显示
       ready: false
     };
@@ -93,19 +95,9 @@ export default {
 
       const style = {
         transform: `translateX(${this.translate}px) scale(${this.scale})`,
+        transformOrigin: "left center",
         transition: transitionValue
       };
-      if (this.modeType === "card") {
-        const zIndexValue =
-          this.scale > (1 - this.edgeCardScale) / 2 + this.edgeCardScale
-            ? 103
-            : this.isCenter
-            ? 102
-            : this.onEdge
-            ? 101
-            : 100;
-        style["zIndex"] = zIndexValue;
-      }
       return autoprefixer(style);
     }
   },
@@ -167,18 +159,12 @@ export default {
     },
 
     updateCardTranslate(index, activeIndex) {
+      console.log(index, activeIndex);
+
       const parentWidth = this.$parent.$el["offsetWidth"];
-      if (this.onEdge || this.isCenter) {
-        return (
-          (parentWidth *
-            ((2 - this.edgeCardScale) * (index - activeIndex) + 1)) /
-          4
-        );
-      } else if (index < activeIndex) {
-        return (-(1 + this.edgeCardScale) * parentWidth) / 4;
-      } else {
-        return ((3 + this.edgeCardScale) * parentWidth) / 4;
-      }
+      if (this.onEdgeLeft) return 0;
+      if (this.isCenter) return parentWidth / 4;
+      if (this.onEdgeRight) return parentWidth * (1 - 0.5 * this.edgeCardScale);
     },
 
     /**
@@ -215,17 +201,28 @@ export default {
     },
 
     slideTranslateCardItem(index, activeIndex) {
-      // 处理当前索引
-      index = this.processCardIndex(index, activeIndex);
+      // // 处理当前索引
+      // index = this.processCardIndex(index, activeIndex);
+      index = (index + 1) % 3;
 
       // isAnimating 表示有过渡动画的SwiperItem
       this.isAnimating =
-        this.onEdge || this.isCenter || Math.abs(index - activeIndex) <= 1;
+        this.onEdgeLeft ||
+        this.onEdgeRight ||
+        this.isCenter ||
+        Math.abs(index - activeIndex) <= 1;
 
       // 下边这两行主要是用于产生特定的样式，修改translate后触发生成动态样式
-      this.onEdge = Math.abs(index - activeIndex) === 1;
+      this.onEdgeLeft = (activeIndex + 2) % 3 === index;
+      this.onEdgeRight = (activeIndex + 4) % 3 === index;
+      console.log(
+        "edge",
+        index,
+        activeIndex,
+        this.onEdgeLeft,
+        this.onEdgeRight
+      );
       this.isCenter = index === activeIndex;
-
       this.translate = this.updateCardTranslate(index, activeIndex);
 
       this.ready = true;
@@ -295,7 +292,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style lang="scss" scoped>
 .swiper-item {
   position: absolute;
   box-sizing: border-box;
@@ -305,10 +302,16 @@ export default {
 .swiper-item.swiper-item-card {
   width: 50%;
 }
-.swiper-item.swiper-item-card.on-edge {
-  z-index: 100;
+.swiper-item.swiper-item-card {
+  &.on-edge-left {
+    z-index: 102;
+  }
 }
-
+.swiper-item.swiper-item-card {
+  .on-edge-right {
+    z-index: 101;
+  }
+}
 .swiper-item.swiper-item-card.is-center {
   z-index: 103;
 }
