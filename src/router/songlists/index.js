@@ -17,7 +17,7 @@ export default [
     component: Chinese
   },
   {
-    path: 'light-music',
+    path: 'lightMusic',
     component: LightMusic
   },
   {
@@ -25,7 +25,7 @@ export default [
     component: Official
   },
   {
-    path: 'pop-music',
+    path: 'popMusic',
     component: PopMusic
   },
   {

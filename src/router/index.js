@@ -6,6 +6,7 @@ import SonglistsRoutes from './songlists'
 
 const Main = () => import('pages/main')
 const Songlists = () => import('pages/songlists')
+const SonglistTags = () => import('pages/songlist-tags')
 const SonglistDetail = () => import('pages/songlist-detail')
 const DailyRecommend = () => import('pages/daily-recommend')
 const RankingList = () => import('pages/ranking-list')
@@ -43,6 +44,12 @@ const routes = [
     children: [
       ...SonglistsRoutes
     ]
+  },
+  // 歌单标签页面
+  {
+    path: '/songlistTags',
+    name: 'songlistTags',
+    component: SonglistTags,
   },
   // 排行榜页面
   {

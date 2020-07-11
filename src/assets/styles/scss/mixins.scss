@@ -21,8 +21,12 @@
 }
 
 // 边框色
-@mixin border-repo($key, $size:.01rem) {
-  border: $size solid;
+@mixin border-color-repo($key, $size:.01rem, $top:solid, $right:solid, $bottom:solid, $left:solid) {
+  border-top: $size $top;
+  border-right: $size $right;
+  border-bottom: $size $bottom;
+  border-left: $size $left;
+
   border-color: map-get($--day, $key);
   [data-theme="night"] & {
     border-color: map-get($--night, $key);

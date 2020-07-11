@@ -1,0 +1,37 @@
+.nav-row-wrapper {
+  display: flex;
+  position: relative;
+  @include background-color-repo(color-fill-bg-3);
+  @include border-color-repo(color-border-2, .01rem, none, none, solid, none);
+  
+  .nav-links {
+    display: flex;
+    flex: 1;
+    overflow-x: scroll;
+
+    .nav-item {
+      box-sizing: border-box;
+      flex-shrink: 0;
+      padding: 0 .48rem; 
+      @include font-color-repo(color-text-10);
+      font-size: .28rem;
+      line-height: .78rem;
+      cursor: pointer;
+      &.router-link-exact-active {
+        // 处于点击状态时（下方横条.04rem）
+        @include font-color-repo(color-primary);
+        font-weight: 600;
+      }
+    }
+  }
+  .btn-tags {
+    position: relative;
+    width: .78rem;
+    height: .78rem;
+    .iconfont {
+      font-size: .36rem;
+      @include font-color-repo(color-text-10);
+      @include vertical-horizontal-center()
+    }
+  }
+}
