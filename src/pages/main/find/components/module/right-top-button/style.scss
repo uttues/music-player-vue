@@ -2,7 +2,7 @@
     padding: .06rem .22rem;
     border: .01rem solid;
     border-radius: .25rem;
-    @include border-repo(color-border-1);
+    @include border-color-repo(color-border-1);
     span {
         font-size: .24rem;
         line-height: .34rem;

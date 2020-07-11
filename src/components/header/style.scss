@@ -1,0 +1,18 @@
+.header-wrapper {
+  display: flex;
+  height: 1.24rem;
+  padding: 0 $horizontal-edge-margin;
+  @include background-color-repo(color-fill-bg-3);
+
+  .btn-return {
+    margin-right: .38rem;
+    @include font-color-repo(color-text-9);
+    font-size: .42rem;
+    line-height: 1.24rem;
+  }
+  h3 {
+    @include font-color-repo(color-text-9);
+    font-size: .36rem;
+    line-height: 1.24rem;
+  }
+}

@@ -10,7 +10,7 @@
     height: 1.16rem;
     box-sizing: border-box;
     border-radius: .1rem;
-    @include border-repo(color-border-transparent-2);
+    @include border-color-repo(color-border-transparent-2);
   }
   .song-info-wrapper {
     max-width: 4.32rem;
@@ -41,7 +41,7 @@
     box-sizing: border-box;
     width: .52rem;
     height: .52rem;
-    @include border-repo(color-border-1);
+    @include border-color-repo(color-border-1);
     border-radius: 50%;
     .icon-bofang1 {
       @include vertical-horizontal-center();

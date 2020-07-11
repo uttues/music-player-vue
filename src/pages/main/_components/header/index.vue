@@ -1,21 +1,21 @@
 <template>
-    <div class="header-wrapper">
-        <a class="btn-menu">
-            <i class="iconfont icon-caidan" />
-        </a>
-        <Nav />
-        <a class="btn-search">
-            <i class="iconfont icon-fangdajing" />
-        </a>
-    </div>
+  <div class="header-wrapper">
+    <a class="btn-menu">
+      <i class="iconfont icon-caidan" />
+    </a>
+    <Nav />
+    <a class="btn-search">
+      <i class="iconfont icon-fangdajing" />
+    </a>
+  </div>
 </template>
 
 <script>
-import Nav from './nav'
+import Nav from "./nav";
 export default {
-    components: {
-        Nav
-    }
+  components: {
+    Nav
+  }
 };
 </script>
 

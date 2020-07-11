@@ -1,12 +1,17 @@
 <template>
   <div>
-    歌单广场 Header
+    <Header title="歌单广场" />
     <router-view />
   </div>
 </template>
 
 <script>
-export default {};
+import Header from "components/header";
+export default {
+  components: {
+    Header
+  }
+};
 </script>
 
 <style lang="scss" scoped>

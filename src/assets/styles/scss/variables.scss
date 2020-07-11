@@ -22,8 +22,10 @@ $--day: (
   color-text-6: #848484,  // 歌曲item描述文字
   color-text-7: #333333,  // 底部播放歌曲名
   color-text-8: #808080,  // 底部播放歌手名
+  color-text-9: #212121,  // 歌单广场顶栏
 
   color-border-1: #E6E6E6,
+  color-border-2: #E4E1E1,
   color-border-transparent-1: rgb(238, 238, 238, .1),
   color-border-transparent-2: rgb(238, 238, 238, .7),
 
@@ -33,6 +35,7 @@ $--day: (
   
 //   color-fill-nav-item-active: #262729,
   color-fill-song-item-active: #cfcfcf,
+  color-fill-bg-3: #FBFBFB,
   
   color-message-reminding-text: $color-white, // 提示图标文字
   color-message-reminding-bg: #FF3A3A, // 提示图标背景色
@@ -57,8 +60,10 @@ $--night: (
   color-text-6: #888888,  // 歌曲item描述文字
   color-text-7: #A2A2A3,  // 底部播放歌曲名
   color-text-8: #5C5D5E,  // 底部播放歌手名
+  color-text-9: #BAB9B9,  // 歌单广场顶栏
 
   color-border-1: #1C1D1F,
+  color-border-2: transparent,
   color-border-transparent-1: rgb(56, 58, 56, .1),
   color-border-transparent-2: rgb(56, 58, 56, .7),
 
@@ -68,6 +73,7 @@ $--night: (
 
   color-fill-nav-item-active: #262729,
 //   color-fill-song-item-active: #cfcfcf,
+  color-fill-bg-3: #2B2122,
 
   color-message-reminding-text: #E4C5C3, // 提示图标文字
   color-message-reminding-bg: #A53E37, // 提示图标背景色

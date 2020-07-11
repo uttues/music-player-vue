@@ -1,20 +1,20 @@
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: 1.24rem;
-    padding: 0 $horizontal-edge-margin;
-    
-    .iconfont {
-      &.icon-caidan, &.icon-fangdajing {
-        @include font-color-repo(color-icon-1);
-        font-size: .4rem;
-        line-height: 1.24rem;
-        cursor: pointer;
-        &.icon-caidan::before {
-          transform: scale(.8);
-          display: inline-block;
-        }
+  display: flex;
+  justify-content: space-between;
+  height: 1.24rem;
+  padding: 0 $horizontal-edge-margin;
+  
+  .iconfont {
+    &.icon-caidan, &.icon-fangdajing {
+      @include font-color-repo(color-icon-1);
+      font-size: .4rem;
+      line-height: 1.24rem;
+      cursor: pointer;
+      &.icon-caidan::before {
+        transform: scale(.8);
+        display: inline-block;
       }
-      
     }
+    
+  }
 }
