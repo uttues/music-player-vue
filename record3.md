@@ -120,3 +120,22 @@ CSS的渲染效率-书写高效的CSS
 https://www.cnblogs.com/iswszheng/archive/2009/07/29/1525040.html
 
 css文本省略积累（mixin）
+
+
+const Header = () => import('') 这种写法的作用
+
+//以“/”开头的嵌套路径会被当作根路径，所以子路由上不用加“/”;在生成路由时，主路由上的path会被自动添加到子路由之前，所以子路由上的path不用在重新声明主路由上的path了
+https://www.cnblogs.com/vickylinj/p/10900349.html
+
+
+为什么在history模式下，刷新页面是不可以的？？，报错，需要在hash模式下才行
+
+a标签与router-link的区别 https://blog.csdn.net/saber04/article/details/96717294
+
+https://blog.csdn.net/zgh0711/article/details/78677444
+
+bug: a标签换成router-link标签
+
+![image-20200711080923764](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200711080923764.png)
+
+![image-20200711080847217](D:\Uttues\front-end\demos\music-player-vue\record3.assets\image-20200711080847217.png)

@@ -3,6 +3,7 @@
     <MenuBtn
       class="btn"
       text="每日推荐"
+      path="/dailyRecommend"
     >
       <i class="iconfont icon-rili_fuzhi" />
       <span class="date">{{ new Date().getDate() }}</span>
@@ -10,14 +11,17 @@
     <MenuBtn
       class="btn"
       text="歌单"
+      path="/songlists"
     ><i class="iconfont icon-gedan" /></MenuBtn>
     <MenuBtn
       class="btn"
       text="排行榜"
+      path="/rankingList"
     ><i class="iconfont icon-paixingbang" /></MenuBtn>
     <MenuBtn
       class="btn"
       text="电台"
+      path="/broadcastingStation"
     ><i class="iconfont icon-diantai" /></MenuBtn>
     <MenuBtn
       class="btn"
