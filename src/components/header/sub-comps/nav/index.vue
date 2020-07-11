@@ -1,37 +1,26 @@
 <template>
   <div class="nav-links">
-    <a
+    <router-link
       class="nav-item"
-      :class="{'active': $route.path === '/profile'}"
-      @click="clickRouterForward('profile')"
-    >我的</a>
-    <a
+      to="/profile"
+    >我的</router-link>
+    <router-link
       class="nav-item"
-      :class="{'active': $route.path === '/find'}"
-      @click="clickRouterForward('find')"
-    >发现</a>
-    <a
+      to="/find"
+    >发现</router-link>
+    <router-link
       class="nav-item"
-      :class="{'active': $route.path === '/community'}"
-      @click="clickRouterForward('community')"
-    >云村</a>
-    <a
+      to="/community"
+    >云村</router-link>
+    <router-link
       class="nav-item"
-      :class="{'active': $route.path === '/videos'}"
-      @click="clickRouterForward('videos')"
-    >视频</a>
+      to="/videos"
+    >视频</router-link>
   </div>
 </template>
 
 <script>
-export default {
-  methods: {
-    clickRouterForward(path) {
-      // 好像没有感觉到replace与push的区别？
-      this.$router.replace(`/${path}`);
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
