@@ -373,6 +373,9 @@ export default {
     handleTouchEnd() {
       if (this.isAutoSliding) return;
 
+      // 一个bug：如果不加上这一行的话，后面 autoAnimDuration的值都为0 ！！
+      // this.setAutoAnimDuration(this.slideDuration, false);
+
       // dragRatio>0 会触发小滑动 => 设置滑动时间，开启滑动（内部自动设置滑动保护、定时器重置操作）
       if (this.dragRatio === 0) {
         this.delayRestartTimer(0);
