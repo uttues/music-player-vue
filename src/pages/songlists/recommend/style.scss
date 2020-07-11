@@ -1,0 +1,9 @@
+.songlists-container {
+  @include background-color-repo(color-fill-bg-3);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: $horizontal-edge-margin;
+  .songlist-card {
+    margin: 0 .2rem .36rem 0;
+  }
+}
