@@ -1,11 +1,11 @@
 <!-- 后期把这个组件抽成公用的page -->
 <template>
-  <div>
+  <div class="songlists-inner-page">
     <TopSwiper
       v-if="showSongLists"
       :list="swiperSongLists"
     />
-    <div class=songlists-container>
+    <div class=songlists-falls-container>
       <SongListItem
         class="songlist-card"
         v-for="item in showSongLists"

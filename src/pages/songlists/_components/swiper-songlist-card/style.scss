@@ -1,4 +1,4 @@
-.square-card-wrapper {
+.songlist-card-wrapper {
   position: relative;
   cursor: pointer;
   a {
@@ -8,12 +8,20 @@
   img {
     box-sizing: border-box;
     vertical-align: bottom;
-    @include border-color-repo(color-border-transparent-2);
-    border-radius: .1rem;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
   }
   p {
-    margin-top: .05rem;
-    font-size: .24rem;
+    height: 1.14rem;
+    color: #807f82 !important;
+    background-color: #232226;
+    box-sizing: border-box;
+    padding: .22rem;
+    font-size: .26rem;
+    line-height: .34rem;
+    border-bottom-left-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+    @include background-color-repo(color-fill-bg-1);
     @include font-color-repo(color-text-3);
     @include text-omission-multi(2)
   }
@@ -26,7 +34,7 @@
     transform-origin: top right;
     transform: scale(.5);
     .iconfont.icon-bofang {
-      margin-right: .02rem;
+      margin-right: .06rem;
       font-size: .4rem;
       transform: scale(.8);
       display: inline-block;

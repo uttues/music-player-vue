@@ -1,5 +1,6 @@
 .banner-swiper-container {
-  padding: 0 $horizontal-edge-margin;
+  padding: .48rem $horizontal-edge-margin 0;
+  @include background-color-repo(color-fill-bg-3);
   .banner-item{
     position: relative;
     vertical-align: bottom;

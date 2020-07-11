@@ -36,7 +36,8 @@ $--day: (
   
 //   color-fill-nav-item-active: #262729,
   color-fill-song-item-active: #cfcfcf,
-  color-fill-bg-3: #FBFBFB,
+  color-fill-bg-3: #F8F8F8,
+  color-fill-bg-1: #FFFFFF, // 歌单广场轮播图背景色
   
   color-message-reminding-text: $color-white, // 提示图标文字
   color-message-reminding-bg: #FF3A3A, // 提示图标背景色
@@ -75,7 +76,8 @@ $--night: (
 
   color-fill-nav-item-active: #262729,
 //   color-fill-song-item-active: #cfcfcf,
-  color-fill-bg-3: #2B2122,
+  color-fill-bg-3: #141416, // 歌单广场歌单瀑布
+  color-fill-bg-1: #232226, // 歌单广场轮播图卡片背景色
 
   color-message-reminding-text: #E4C5C3, // 提示图标文字
   color-message-reminding-bg: #A53E37, // 提示图标背景色

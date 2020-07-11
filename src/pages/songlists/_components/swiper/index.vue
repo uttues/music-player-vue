@@ -14,13 +14,13 @@
         :key="index"
       >
         <a class="banner-item">
-          <SongListItem
+          <SwiperSonglistCard
             class="songlist-card"
             :key="item.id"
             :playCount="item.playCount"
             :name="item.name"
             :imgUrl="item.coverImgUrl"
-            size="100%"
+            size="3.36rem"
           />
         </a>
       </SwiperItem>
@@ -30,7 +30,7 @@
 
 <script>
 import apis from "apis";
-import SongListItem from "components/square-card";
+import SwiperSonglistCard from "../swiper-songlist-card";
 import { Swiper, SwiperItem } from "components/swiper-card";
 export default {
   props: {
@@ -47,7 +47,7 @@ export default {
   components: {
     Swiper,
     SwiperItem,
-    SongListItem
+    SwiperSonglistCard
   },
   methods: {
     MarkBgColor(color) {

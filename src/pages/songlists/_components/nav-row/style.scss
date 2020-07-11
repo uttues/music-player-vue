@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   @include background-color-repo(color-fill-bg-3);
-  @include border-color-repo(color-border-2, .01rem, none, none, solid, none);
+  @include border-color-repo(color-border-transparent-2, .01rem, none, none, solid, none);
   
   .nav-links {
     display: flex;
