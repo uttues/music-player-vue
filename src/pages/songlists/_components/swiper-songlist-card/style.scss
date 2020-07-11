@@ -1,4 +1,6 @@
 .songlist-card-wrapper {
+  @include border-shadow-repo(0, .05rem, .1rem, color-text-5);
+
   position: relative;
   cursor: pointer;
   a {
@@ -13,7 +15,6 @@
   }
   p {
     height: 1.14rem;
-    color: #807f82 !important;
     background-color: #232226;
     box-sizing: border-box;
     padding: .22rem;

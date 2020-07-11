@@ -33,6 +33,12 @@
   }
 }
 
+@mixin border-shadow-repo($offsetX, $offsetY, $blur, $key) {
+  filter: drop-shadow($offsetX $offsetY $blur map-get($--day, $key));
+  [data-theme="night"] & {
+    filter: drop-shadow($offsetX $offsetY $blur map-get($--night, $key));
+  }
+}
 
 
 
