@@ -303,7 +303,6 @@ export default {
   height: 100%;
 }
 .swiper-item.swiper-item-card {
-  border: 10px solid rgb(131, 11, 11);
   width: 50%;
 }
 .swiper-item.swiper-item-card.on-edge {
