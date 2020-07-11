@@ -12,7 +12,7 @@
 <script>
 import { mapMutations } from "vuex";
 import { TOGGLE_THEME } from "store/mutation-types";
-import Header from "components/header";
+import Header from "./_components/header";
 
 export default {
   components: {

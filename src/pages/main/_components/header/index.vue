@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Nav from './sub-comps/nav'
+import Nav from './nav'
 export default {
     components: {
         Nav
