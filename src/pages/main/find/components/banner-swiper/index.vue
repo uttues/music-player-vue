@@ -4,7 +4,7 @@
       height='2.58rem'
       show-arrow-type="never"
       handle-indication-type="hover"
-      :drag-ratio-min-limit="0.33"
+      :drag-ratio-min-limit="0.15"
       :loop="true"
       :autoplay="true"
     >
