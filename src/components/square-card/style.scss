@@ -10,6 +10,9 @@
     vertical-align: bottom;
     @include border-color-repo(color-border-transparent-2);
     border-radius: .1rem;
+    &[lazy="loading"] {
+      @include background-color-repo(color-fill-bg-2)
+    }
   }
   p {
     margin-top: .05rem;

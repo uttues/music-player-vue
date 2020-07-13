@@ -8,6 +8,9 @@
     width: 6.84rem;
     border-radius: .1rem;
     vertical-align: bottom;
+    &[lazy="loading"] {
+      @include background-color-repo(color-fill-bg-2)
+    }
   }
   .banner-item-mark {
     position: absolute;

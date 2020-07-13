@@ -11,6 +11,9 @@
     box-sizing: border-box;
     border-radius: .1rem;
     @include border-color-repo(color-border-transparent-2);
+    &[lazy="loading"] {
+      @include background-color-repo(color-fill-bg-2)
+    }
   }
   .song-info-wrapper {
     max-width: 4.32rem;

@@ -1,7 +1,7 @@
 <template>
   <div class="retangle-card-wrapper">
     <img
-      :src="imgUrl"
+      v-lazy="imgUrl"
       alt
     />
     <div class="song-info-wrapper">

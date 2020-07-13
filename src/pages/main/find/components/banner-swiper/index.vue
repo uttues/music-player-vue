@@ -14,7 +14,7 @@
       >
         <a class="banner-item">
           <img
-            :src="item.imageUrl"
+            v-lazy="item.imageUrl"
             alt
           />
           <span

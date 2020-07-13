@@ -6,7 +6,7 @@
   >
     <img
       :style="{'width': size, 'height': size}"
-      :src="imgUrl"
+      v-lazy="imgUrl"
       alt
     />
     <p :style="{'width': size}">{{ name }}</p>
