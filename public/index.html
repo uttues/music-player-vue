@@ -2,18 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="icon"
-          href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <style>
+    html,
+    body {
+      /* 默认可滑动 */
+      position: relative;
+      font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    #loading {
+      /* 默认不显示 */
+      display: none;
+
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+
+      text-align: center;
+      background-color: #dd001b;
+    }
+
+    .load-img {
+      margin-top: 2rem;
+      width: 3.2rem;
+      animation: gradualIn 1s ease-in .5s 1 both;
+    }
+
+    .load-text {
+      position: absolute;
+      bottom: .5rem;
+      width: 100%;
+      color: #fff;
+      font-size: .25rem;
+      animation: gradualIn 1s ease-in 1.7s 1 both;
+    }
+
+    @keyframes gradualIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="app"></div>
+  <div id="loading">
+    <img class="load-img" src='<%= BASE_URL %>images/netease-cloud.png' alt />
+    <p class="load-text iconfont icon-wangyiyunyinle">
+      网易云音乐
+    </p>
+  </div>
+  <div id="app"></div>
+  <script>
+    function setLoadingAnim(body, loading) {
+      body.style.overflow = 'hidden';
+      loading.style.display = 'block';
+      sessionStorage.setItem('loaded', 1)
+      setTimeout(() => {
+        loading.style.display = 'none',
+          body.style.overflow = '';
+      }, 5000)
+    }
+
+    const load = document.getElementById('loading')
+    const body = document.getElementsByTagName('body')[0]
+
+    let isLoaded = sessionStorage.getItem('loaded')
+    if (!isLoaded) {
+      console.log(isLoaded);
+      setLoadingAnim(body, loading)
+    }
+  </script>
 </body>
 
 </html>
